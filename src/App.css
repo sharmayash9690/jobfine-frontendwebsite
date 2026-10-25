@@ -1,0 +1,778 @@
+
+/* Main page */
+.website {
+  width: 100%;
+  overflow: hidden;
+  background: #f4f5f3;
+}
+
+/* Navbar */
+.navbar {
+  min-height: 76px;
+  padding: 0 4.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #087d5b;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.logo-symbol {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 42px);
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #08a96e;
+}
+
+.demo-button,
+.search-bar button,
+.talent-card button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: #08b978;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.demo-button {
+  padding: 12px 24px;
+  border-radius: 9px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.demo-button:hover,
+.search-bar button:hover,
+.talent-card button:hover {
+  background: #069b65;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #102c2d;
+}
+
+/* Hero layout */
+.hero {
+  min-height: 560px;
+  padding: 25px 4.5% 48px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 470px;
+  padding: 12px 0 8px;
+}
+
+.eyebrow {
+  color: #07865e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 18px;
+}
+
+.hero h1 {
+  color: #102c2d;
+  font-size: clamp(54px, 6vw, 76px);
+  line-height: 0.99;
+  font-weight: 500;
+  letter-spacing: -5px;
+  margin: 0;
+}
+
+.hero-description {
+  max-width: 350px;
+  margin: 17px 0 20px;
+  color: #818684;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* Search form */
+.search-bar {
+  width: 100%;
+  max-width: 375px;
+  min-height: 48px;
+  padding: 5px 6px 5px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #eceeeb;
+  border-radius: 10px;
+}
+
+.search-bar > svg {
+  flex-shrink: 0;
+  color: #536260;
+}
+
+.search-bar input {
+  min-width: 0;
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #102c2d;
+  background: transparent;
+  font-size: 12px;
+}
+
+.search-bar input::placeholder {
+  color: #a1a6a3;
+}
+
+.search-bar button {
+  min-width: 85px;
+  align-self: stretch;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.search-message {
+  max-width: 375px;
+  margin: 10px 0 0;
+  color: #087d5b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Stats and potential */
+.hero-bottom {
+  margin-top: 44px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.matches-card {
+  width: 126px;
+  min-width: 126px;
+  height: 116px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 11px;
+  background: #ded0ff;
+}
+
+.matches-card strong {
+  font-size: 37px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.matches-card span {
+  margin-top: 6px;
+  font-size: 10px;
+}
+
+.potential-card {
+  max-width: 225px;
+}
+
+.potential-card h2 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.7px;
+}
+
+.potential-card p {
+  margin: 6px 0 10px;
+  color: #818684;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.potential-card a,
+.below-fold a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #079c6b;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Hero decorative visual */
+.hero-visual {
+  min-width: 0;
+  min-height: 450px;
+  height: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+.purple-shape {
+  position: absolute;
+  z-index: -2;
+  inset: -25px -35px 10px 5%;
+  background: #d8c5ff;
+  clip-path: polygon(67% 0, 100% 0, 100% 100%, 45% 100%, 8% 67%, 0 58%);
+}
+
+.green-shape {
+  position: absolute;
+  z-index: -1;
+  inset: -10px -35px -20px 9%;
+  background: #003e40;
+  clip-path: polygon(65% 0, 100% 0, 100% 100%, 42% 100%, 0 61%, 0 54%);
+  border-radius: 20px;
+}
+
+.hero-image-placeholder {
+  position: absolute;
+  top: 21%;
+  left: 13%;
+  width: 72%;
+  height: 65%;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  background:
+    linear-gradient(140deg, rgba(8, 49, 48, 0.1), rgba(8, 49, 48, 0.6)),
+    linear-gradient(110deg, #b5c6be 0%, #e0e2dc 48%, #9bafa6 100%);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.image-overlay {
+  width: 100%;
+  padding: 25px 20px;
+  color: white;
+  background: linear-gradient(transparent, rgba(0, 40, 39, 0.75));
+}
+
+.image-icon {
+  font-size: 22px;
+}
+
+.image-overlay span,
+.image-overlay p {
+  display: block;
+}
+
+.image-overlay span:not(.image-icon) {
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.image-overlay p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+/* Floating cards */
+.floating-card {
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid rgba(10, 40, 38, 0.06);
+  border-radius: 13px;
+  box-shadow: 0 10px 35px rgba(10, 35, 33, 0.1);
+}
+
+.alert-card {
+  top: 32%;
+  left: -4%;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.notification-icon {
+  color: #09a96e;
+  display: flex;
+}
+
+.talent-card {
+  top: 5%;
+  right: 0;
+  width: 180px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.talent-card h3 {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.talent-card label {
+  margin: 5px 0;
+  font-size: 9px;
+  color: #465654;
+}
+
+.talent-card input {
+  width: 100%;
+  height: 28px;
+  padding: 5px 8px;
+  border: 1px solid #e2e7e4;
+  border-radius: 7px;
+  outline-color: #08b978;
+  font-size: 10px;
+}
+
+.talent-card button {
+  margin-top: 10px;
+  padding: 9px;
+  border-radius: 8px;
+  font-size: 10px;
+}
+
+.candidates-card {
+  bottom: 5%;
+  left: 0;
+  min-width: 195px;
+  padding: 13px 15px;
+}
+
+.candidates-card strong {
+  font-size: 12px;
+}
+
+.candidate-avatars {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding-left: 3px;
+}
+
+.candidate-avatars span {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  margin-left: -3px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #d7e8df;
+  color: #145246;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.candidate-avatars span:nth-child(2) {
+  background: #f0d5c1;
+}
+
+.candidate-avatars span:nth-child(3) {
+  background: #d7d7ef;
+}
+
+.candidate-avatars span:nth-child(4) {
+  background: #e8d4ad;
+}
+
+.candidate-avatars .avatar-plus {
+  background: #08b978;
+  color: #fff;
+}
+
+.dot-pattern {
+  position: absolute;
+  right: 4%;
+  bottom: 1%;
+  width: 85px;
+  height: 90px;
+  opacity: 0.65;
+  background-image: radial-gradient(#c3ded5 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+}
+
+/* Company logo strip */
+.brand-strip {
+  min-height: 88px;
+  padding: 20px 4.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  background: #fff;
+  border-top: 1px solid #e7e9e5;
+  border-bottom: 1px solid #e7e9e5;
+  color: #818785;
+}
+
+.brand-strip span {
+  white-space: nowrap;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+
+.brand-aws {
+  font-size: 25px !important;
+  font-weight: 400 !important;
+}
+
+.brand-walmart {
+  font-size: 18px !important;
+}
+
+.brand-hbo {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+}
+
+.brand-vanguard {
+  font-family: Georgia, serif;
+}
+
+.brand-time {
+  font-family: Georgia, serif;
+  font-weight: 400 !important;
+}
+
+.brand-levis {
+  padding: 5px 9px;
+  color: #fff;
+  background: #818785;
+  font-size: 16px !important;
+}
+
+/* Additional section */
+.below-fold {
+  padding: 75px 6%;
+  text-align: center;
+}
+
+.below-fold > p {
+  color: #079c6b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.below-fold h2 {
+  max-width: 540px;
+  margin: 14px auto 20px;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+  .navbar {
+    gap: 18px;
+    padding-inline: 4%;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 10px;
+    padding-inline: 4%;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 6.5vw, 64px);
+    letter-spacing: -3px;
+  }
+
+  .hero-visual {
+    min-height: 390px;
+  }
+
+  .talent-card {
+    width: 155px;
+  }
+
+  .alert-card {
+    left: -7%;
+  }
+
+  .hero-bottom {
+    gap: 12px;
+  }
+
+  .matches-card {
+    width: 110px;
+    min-width: 110px;
+  }
+
+  .matches-card strong {
+    font-size: 32px;
+  }
+
+  .potential-card h2 {
+    font-size: 16px;
+  }
+
+  .brand-strip {
+    gap: 15px;
+  }
+
+  .brand-strip span {
+    font-size: 17px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .navbar {
+    min-height: 70px;
+    padding: 0 20px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 8px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: 15px;
+    right: 15px;
+    padding: 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: #fff;
+    border: 1px solid #e8ece8;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(10, 35, 33, 0.1);
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 6px;
+    font-size: 14px;
+  }
+
+  .demo-button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 30px 20px 25px;
+    gap: 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding-top: 10px;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(58px, 12vw, 76px);
+    letter-spacing: -3.5px;
+  }
+
+  .hero-description {
+    max-width: 360px;
+    font-size: 13px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .hero-bottom {
+    margin-top: 28px;
+    gap: 14px;
+  }
+
+  .matches-card {
+    height: 105px;
+  }
+
+  .potential-card {
+    max-width: 230px;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+    margin-top: 22px;
+  }
+
+  .purple-shape {
+    inset: 0 -40px 0 0;
+  }
+
+  .green-shape {
+    inset: 12px -40px -5px 5%;
+  }
+
+  .hero-image-placeholder {
+    top: 16%;
+    left: 12%;
+    width: 76%;
+    height: 69%;
+  }
+
+  .alert-card {
+    top: 27%;
+    left: -2%;
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  .talent-card {
+    top: 0;
+    right: 0;
+    width: 145px;
+    padding: 10px;
+  }
+
+  .talent-card h3 {
+    font-size: 12px;
+  }
+
+  .candidates-card {
+    bottom: 0;
+    left: 0;
+    min-width: 180px;
+  }
+
+  .dot-pattern {
+    right: 1%;
+    bottom: 0;
+  }
+
+  .brand-strip {
+    min-height: 105px;
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    gap: 20px 12px;
+  }
+
+  .brand-strip span,
+  .brand-walmart,
+  .brand-hbo {
+    font-size: 16px !important;
+  }
+
+  .brand-aws {
+    font-size: 21px !important;
+  }
+
+  .brand-levis {
+    font-size: 13px !important;
+  }
+
+  .below-fold {
+    padding: 55px 22px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .navbar {
+    padding-inline: 12px;
+  }
+
+  .demo-button {
+    padding-inline: 9px;
+  }
+
+  .hero {
+    padding-inline: 15px;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+  }
+
+  .hero-bottom {
+    gap: 10px;
+  }
+
+  .matches-card {
+    width: 100px;
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  .potential-card h2 {
+    font-size: 15px;
+  }
+
+  .talent-card {
+    width: 132px;
+  }
+
+  .alert-card {
+    left: -4%;
+  }
+}
